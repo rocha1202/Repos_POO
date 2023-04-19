@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2Buy</title>
+</head>
+
+<body>
+    <h1>2Buy</h1>
+    <form id="addForm">
+        <div>
+            <label for="addName">Name:</label>
+            <input type="text" name="" id="addName" required>
+        </div>
+        <div>
+            <label for="addCategoria">Categoria:</label>
+            <select id="addCategoria" required>
+                <option value="">SELECIONE UMA CATEGORIA</option>
+                <option value="fruta">fruta</option>
+                <option value="legumes">legumes</option>
+                <option value="carne">carne</option>
+                <option value="peixe">peixe</option>
+                <option value="bebida">bebida</option>
+                <option value="other">other</option>
+            </select>
+            <button onclick="newCate()">Nova Categoria</button>
+        </div>
+        <div>
+            <label for="addQuant">Quatidade:</label>
+            <input type="number" min="1" max="1000" name="" id="addQuant" value=1 required>
+        </div>
+        <input type="submit" value="Adicionar" id="add">
+    </form>
+    <hr>
+    <table>
+        <thead>
+          <th>NOME</th>
+          <th>CATEGORIA</th>
+          <th>QUATIDADE</th>
+        </thead>
+        <tbody id="table"></tbody>
+      </table>
+    <hr>
+    <div>
+        <button onclick="nProdutos()">Nº PRODUTOS</button>
+        <button onclick="produtosPorCate()">PRODUTOS POR CATEGORIA</button>
+        <button onclick="quatTotal()">QUATIDADE TOTAL</button>
+        <button onclick="limparLista()">LIMPAR LISTA</button>
+
+      </div>
+    <script src="2Buy.js"></script>
+</body>
+
+</html>
